@@ -8,6 +8,8 @@
 :root {
     --site-background-color: #f4f4f4;
     --card-background-color: #fff;
+    --card-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.05);
+    --card-box-shadow-hover: 0 3px 8px 6px rgba(7, 17, 27, 0.05);
 }
 
 /* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
@@ -17,6 +19,10 @@
     src: url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/ra_jTLBW01ghz3wmDvMSa.woff2") format("woff2"),
         url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/POtd9aNH15TexWpOHujj8.woff") format("woff");
     font-display: swap;
+}
+
+.iconfont {
+    font-size: 26px;
 }
 
 body {
@@ -32,6 +38,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    box-shadow: var(--card-box-shadow);
 }
 
 /* .site-title {} */
@@ -49,10 +56,76 @@ header {
 
 .content {
     background-color: var(--card-background-color);
-    margin-top: 20px;
-    text-align: center;
+    height: 300px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto 40px;
+    border-radius: 10px;
+    box-shadow: var(--card-box-shadow);
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.intro p {
+    align-items: center;
+    /* border-right: 1px solid gray; */
+    padding-right: 4px;
+}
+
+.intro img {
+    width: 8%;
+    border-radius: 100%;
+    margin-left: 10px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    /* padding: 20px auto 0; */
+    padding-top: 20px;
+}
+
+.social>ul:not(:first-child) {
+    margin-left: 16px;
+}
+
+.social ul {
+    list-style-type: none;
+}
+
+.social ul li a {
+    text-decoration: none;
 }
 
 .footer {
     background-color: var(--card-background-color);
+    clear: both;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.footer-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-group-item {
+    float: left;
+}
+
+.footer-group-item ul {
+    list-style-type: none;
+}
+
+.footer-group-item ul li a {
+    text-decoration: none;
+}
+
+.footer-group-item-title {
+    font-weight: bolder;
 }
