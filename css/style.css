@@ -102,13 +102,13 @@ header {
     color: #000;
 }
 
-.footer {
+footer {
     background-color: var(--card-background-color);
     clear: both;
     width: 100%;
     bottom: 0;
-    position: absolute;
-    height: 400px;
+    position: relative;
+    height: 200px;
 }
 
 .footer-group {
