@@ -1,0 +1,58 @@
+/** style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --site-background-color: #f4f4f4;
+    --card-background-color: #fff;
+}
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "钉钉进步体 Regular";
+    font-weight: 400;
+    src: url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/ra_jTLBW01ghz3wmDvMSa.woff2") format("woff2"),
+        url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/POtd9aNH15TexWpOHujj8.woff") format("woff");
+    font-display: swap;
+}
+
+body {
+    background-color: var(--site-background-color);
+    font-family: '钉钉进步体 Regular', Arial, Helvetica, sans-serif;
+}
+
+/*? header */
+
+header {
+    background-color: var(--card-background-color);
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* .site-title {} */
+
+/* .site-title a:hover {
+    background-color: blue;
+    color: #fff;
+} */
+
+.site-title a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+.content {
+    background-color: var(--card-background-color);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer {
+    background-color: var(--card-background-color);
+}
