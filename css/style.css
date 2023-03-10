@@ -149,12 +149,16 @@ footer:hover {
 
 .footer-group {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .footer-group-item {
     float: left;
     width: 100px;
+}
+
+footer>.footer-group:not(:first-child) {
+    margin-top: 10px;
 }
 
 .footer-group-item ul {
@@ -164,7 +168,7 @@ footer:hover {
 .footer-group-item ul li a {
     text-decoration: none;
     color: #3e3841;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 /* .footer-group-item>ul:not(:first-child) {
@@ -180,3 +184,5 @@ footer:hover {
 .footer-group-item-link>ul:not(:first-child) {
     margin-top: 4px;
 }
+
+/* #freind-list {} */
