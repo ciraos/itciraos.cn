@@ -8,7 +8,7 @@
 :root {
     --site-background-color: #f4f4f4;
     --card-background-color: #fff;
-    --card-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.05);
+    /* --card-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.05); */
     --card-box-shadow-hover: 0 3px 8px 6px rgba(7, 17, 27, 0.05);
 }
 
@@ -22,12 +22,12 @@
 }
 
 .iconfont {
-    font-size: 26px;
+    font-size: 26px !important;
 }
 
 body {
     background-color: var(--site-background-color);
-    font-family: '钉钉进步体 Regular', Arial, Helvetica, sans-serif;
+    font-family: '钉钉进步体 Regular', 'Microsoft YaHei', Arial, Helvetica, sans-serif;
 }
 
 /*? header */
@@ -41,6 +41,10 @@ header {
     box-shadow: var(--card-box-shadow);
 }
 
+header:hover {
+    box-shadow: var(--card-box-shadow-hover);
+}
+
 /* .site-title {} */
 
 /* .site-title a:hover {
@@ -50,8 +54,26 @@ header {
 
 .site-title a {
     text-decoration: none;
-    color: #000;
+    color: #ee2c79;
     font-size: 18px;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link ul {
+    list-style-type: none;
+}
+
+.link ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.link>ul:not(:first-child) {
+    margin-left: 8px;
 }
 
 .content {
@@ -62,6 +84,10 @@ header {
     margin: 20px auto 40px;
     border-radius: 10px;
     box-shadow: var(--card-box-shadow);
+}
+
+.content:hover {
+    box-shadow: var(--card-box-shadow-hover);
 }
 
 .intro {
@@ -102,6 +128,11 @@ header {
     color: #000;
 }
 
+.feihua {
+    text-align: center;
+    padding-top: 20px;
+}
+
 footer {
     background-color: var(--card-background-color);
     clear: both;
@@ -109,15 +140,21 @@ footer {
     bottom: 0;
     position: relative;
     height: 200px;
+    padding: 20px 0 40px 0;
+}
+
+footer:hover {
+    box-shadow: var(--card-box-shadow-hover);
 }
 
 .footer-group {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .footer-group-item {
     float: left;
+    width: 100px;
 }
 
 .footer-group-item ul {
@@ -126,8 +163,20 @@ footer {
 
 .footer-group-item ul li a {
     text-decoration: none;
+    color: #3e3841;
+    font-size: 1em;
 }
+
+/* .footer-group-item>ul:not(:first-child) {
+    margin-top: 8px;
+} */
 
 .footer-group-item-title {
     font-weight: bolder;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.footer-group-item-link>ul:not(:first-child) {
+    margin-top: 4px;
 }
