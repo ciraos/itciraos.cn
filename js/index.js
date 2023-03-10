@@ -1,5 +1,5 @@
 /* 随机友链 */
-fetch('https://fcircle.itciraos.cn/friend')
+fetch("https://fcircle.itciraos.cn/friend")
     .then(response => response.json())
     .then(data => {
         const friendList = document.getElementById('friend-list');
