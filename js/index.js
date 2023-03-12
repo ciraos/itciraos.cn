@@ -27,6 +27,10 @@ fetch('https://fcircle.itciraos.cn/randompost?num=20')
         };
     });
 
+window.onload = function() {
+    message.info("欢迎欢迎！热烈欢迎！！！");
+}
+
 /** */
 console.log("   ____ ___ ____      _    ___  ____\n",
     " / ___|_ _|  _ \\    / \\  / _ \\/ ___|\n",
