@@ -3,14 +3,28 @@
 fetch('https://fcircle.itciraos.cn/friend')
     .then(response => response.json())
     .then(data => {
-        const friendList = document.getElementById('friend-list');
+        const friendlist = document.getElementById('friend-list');
         for (let i = 0; i < 3; i++) {
             const randomIndex = Math.floor(Math.random() * data.length);
             const friend = data[randomIndex];
             const li = document.createElement('li');
             li.innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${friend.link}">${friend.name}</a>`;
-            friendList.appendChild(li);
-        }
+            friendlist.appendChild(li);
+        };
+    });
+
+/** 随机友链文章 */
+fetch('https://fcircle.itciraos.cn/randompost?num=20')
+    .then(response => response.json())
+    .then(data => {
+        const postlist = document.getElementById('randompost-list');
+        for (let j = 0; j < 3; j++) {
+            const randomPost = Math.floor(Math.random() * data.length);
+            const post = data[randomPost];
+            const li = document.createElement('li');
+            li.innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${post.link}">${post.title}</a>`;
+            postlist.appendChild(li);
+        };
     });
 
 /** */
