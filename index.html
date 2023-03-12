@@ -2,12 +2,11 @@
 <html lang="zh-CN">
 
 <head>
-    <script defer src="/js/cw-worker.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon"
-        href="https://gcore.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2022-12-30-23-26-12.webp">
+    <script defer src="/js/cw-worker.js"></script>
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2022-12-30-23-26-12.webp">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1979953_68psxurufeb.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Ciraos葱苓</title>
@@ -35,16 +34,15 @@
     <div class="content">
         <div class="intro">
             <!-- <p>Hello! I am Ciraos<br>Welcome to my blog!</p> -->
-            <img src="https://gcore.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2022-12-30-23-27-01.webp"
-                alt="avatar">
+            <img src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2022-12-30-23-27-01.webp" alt="avatar">
         </div>
         <div class="social">
             <ul>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://github.com"><i
+                <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/"><i
                             class="iconfont icon-github"></i></a></li>
             </ul>
             <ul>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://gitee.com"><i
+                <li><a target="_blank" rel="noopener noreferrer" href="https://gitee.com/"><i
                             class="iconfont icon-gitee"></i>
                     </a></li>
             </ul>
@@ -63,18 +61,19 @@
                 <div class="footer-group-item-title">博客</div>
                 <div class="footer-group-item-link">
                     <ul>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://blog.itciraos.cn">博客主页</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://blog.itciraos.cn/">博客主页</a></li>
                     </ul>
                     <ul>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://blog.itciraos.cn/archives">归档</a>
+                        <li><a target="_blank" rel="noopener noreferrer"
+                                href="https://blog.itciraos.cn/archives/">归档</a>
                         </li>
                     </ul>
                     <ul>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://blog,itciraos.cn/friends">友人帐</a>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://blog,itciraos.cn/talk/">留言板</a>
                         </li>
                     </ul>
                     <ul>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://blog,itciraos.cn">更多</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://blog,itciraos.cn/">更多</a></li>
                     </ul>
                 </div>
             </div>
@@ -112,6 +111,16 @@
                     </ul>
                 </div>
             </div>
+            <div class="footer-group-item">
+                <div class="footer-group-item-title">友情链接</div>
+                <div class="footer-group-item-link">
+                    <ul id="friend-list"></ul>
+                    <ul>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://blog.itciraos.cn/friends/">更多</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="footer-group">宝剑锋从磨砺出，梅花香自苦寒来。</div>
@@ -120,6 +129,7 @@
 
     <!-- scripts -->
     <script async src="/js/index.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/msg-alert"></script>
 
 </body>
 

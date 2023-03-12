@@ -27,7 +27,7 @@
 
 body {
     background-color: var(--site-background-color);
-    font-family: '钉钉进步体 Regular', 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+    /* font-family: '钉钉进步体 Regular', 'Microsoft YaHei', Arial, Helvetica, sans-serif; */
 }
 
 /*? header */
@@ -196,4 +196,6 @@ footer>.footer-group:not(:first-child) {
     margin-top: 4px;
 }
 
-/* #freind-list {} */
+#freind-list ul li {
+    overflow: hidden;
+}
