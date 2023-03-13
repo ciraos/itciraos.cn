@@ -1,5 +1,5 @@
 
-/* 随机友链 */
+/** 随机友链 */
 fetch('https://fcircle.itciraos.cn/friend')
     .then(response => response.json())
     .then(data => {
@@ -13,21 +13,8 @@ fetch('https://fcircle.itciraos.cn/friend')
         };
     });
 
-/** 随机友链文章 */
-fetch('https://fcircle.itciraos.cn/randompost?num=20')
-    .then(response => response.json())
-    .then(data => {
-        const postlist = document.getElementById('randompost-list');
-        for (let j = 0; j < 3; j++) {
-            const randomPost = Math.floor(Math.random() * data.length);
-            const post = data[randomPost];
-            const li = document.createElement('li');
-            li.innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${post.link}">${post.title}</a>`;
-            postlist.appendChild(li);
-        };
-    });
-
-window.onload = function() {
+/** */
+window.onload = function () {
     message.info("欢迎欢迎！热烈欢迎！！！");
 }
 
@@ -77,22 +64,19 @@ function PublicSacrificeDay() {
     }
 }
 
-/* 禁用 cltr+f5、ctrl+s */
-document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
-    var e = event || window.event || arguments.callee.caller.arguments[0];
-    if ((e.ctrlKey == true && (e.keyCode == 116)) || (e.ctrlKey == true && e.shiftKey == true && e.keyCode == 82) || (e.shiftKey == true && e.keyCode == 116) || (e.ctrlKey == true && e.shiftKey == true && e.keyCode == 116)) {
-        e.keyCode = 0;
-        e.returnValue = false;
-        // VolantisApp.message('', '');
-        // let i = 0;
-        // i++;
-        // console.log(i);
+/** 禁用 cltr+f5强制刷新 */
+document.addEventListener('keydown', function (event) {
+    if (event.keyCode === 116 && event.ctrlKey) {
+        event.preventDefault();
         message.info('哒咩哒咩！请不要强制刷新页面！因为本网站使用clientworker，所以强制刷新对您的访问体验是非常非常不好的！！所以请按下f12，或者鼠标右键点击检查，在"应用程序"-"存储"中，选择"清除网站数据"来清理缓存哦！谢谢！')
+
     }
-};
-/* $(document).keydown(function (e) {
-if (e.ctrlKey == true && e.keyCode == 83) {
-console.log('ctrl+s');
-return false;
-}
-}); */
+});
+
+/** 禁用 ctrl+s保存 */
+// document.addEventListener('keydown', function (event) {
+//     if (event.keyCode === && event.) {
+//         event.preventDefault;
+//         message.info('？不想干好事情？')
+//     }
+// });

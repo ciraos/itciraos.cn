@@ -1,5 +1,7 @@
 /** style.css */
 
+/** general */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +32,7 @@ body {
     /* font-family: '钉钉进步体 Regular', 'Microsoft YaHei', Arial, Helvetica, sans-serif; */
 }
 
-/*? header */
+/** header */
 
 header {
     background-color: var(--card-background-color);
@@ -76,6 +78,8 @@ header:hover {
 .link>ul:not(:first-child) {
     margin-left: 8px;
 }
+
+/** content */
 
 .content {
     background-color: var(--card-background-color);
@@ -144,42 +148,7 @@ header:hover {
     padding-top: 20px;
 }
 
-.randompost {
-    height: 180px;
-    width: 76%;
-    background-color: var(--card-background-color);
-    box-shadow: var(--card-box-shadow);
-    margin: 20px auto;
-    border-radius: 10px;
-}
-
-.randompost:hover {
-    box-shadow: var(--card-box-shadow-hover);
-}
-
-.randompost-title {
-    width: 20%;
-    margin: 0 auto;
-    padding: 4px 0 0 0;
-    text-align: center;
-}
-
-/* .randompost-item,
-.randompost-list {} */
-
-.randompost-item ul {
-    list-style-type: none;
-}
-
-.randompost-item ul li a {
-    text-decoration: none;
-    color: #000;
-}
-
-.randompost-item>ul:not(:first-child),
-.randompost-list>ul:not(:first-child) {
-    margin-top: 5px;
-}
+/** heart */
 
 .heart {
     width: 200px;
@@ -229,6 +198,8 @@ header:hover {
     }
 }
 
+/** footer */
+
 footer {
     /* background-color: var(--card-background-color); */
     clear: both;
@@ -236,17 +207,19 @@ footer {
     bottom: 0;
     position: relative;
     height: 200px;
-    padding: 20px 0 40px 0;
+    padding: 5px 0;
+    margin-top: 20px;
 }
 
-footer:hover {
+/* footer:hover {
     box-shadow: var(--card-box-shadow-hover);
-}
+} */
 
 .footer-group {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .footer-group-item {
@@ -255,7 +228,7 @@ footer:hover {
 }
 
 footer>.footer-group:not(:first-child) {
-    margin-top: 10px;
+    margin-top: 18.88px;
 }
 
 .footer-group-item ul {
